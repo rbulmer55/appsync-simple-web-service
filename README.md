@@ -6,6 +6,10 @@ This project uses TypeScript development with CDK.
 
 The `cdk.json` file tells the CDK Toolkit how to execute your app.
 
+### Help and Info:
+
+https://robertbulmer.medium.com/aws-appsync-implementing-the-simple-web-service-serverless-pattern-560360e03cb2
+
 ## GraphQL Schema
 
 ### Mutations
