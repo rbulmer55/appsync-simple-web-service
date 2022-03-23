@@ -1,0 +1,16 @@
+#set($errors = [])
+
+#if (!$util.matches("^a-zA-Z{1,100}$", $ctx.args.input.artist))
+    #if ($util.isNullOrEmpty($ctx.args.input.artist))
+        $util.qr($errors.add("Artist is a required property"))
+    #else
+        $util.qr($errors.add("$ctx.args.input.artist is not a valid artist property"))
+    #end
+#end
+
+#if ($errors.size() > 0)
+    $util.error($util.toJson($errors))
+#end
+
+## Return if no errors
+{}
