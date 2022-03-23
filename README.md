@@ -11,16 +11,27 @@ The `cdk.json` file tells the CDK Toolkit how to execute your app.
 ### Mutations
 
 ```
-Type Mutation{
+input SongInput {
+  name: String!
+  artist: String!
+}
 
+Type Mutation{
+    addSong(input: SongInput!): Song
 }
 ```
 
 ### Queries
 
 ```
-Type Query{
+type Song {
+  id: String!
+  name: String!
+  artist: String!
+}
 
+type Query {
+  getSongs: [Song!]
 }
 ```
 
